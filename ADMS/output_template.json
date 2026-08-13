@@ -1,0 +1,33 @@
+[
+    {
+        "components": [],
+        "name": "Table",
+        "type": "table",
+        "value": {
+            "table": {
+                "columns": [
+                    {
+                        "name": "p_rel",
+                        "rows": [
+                            "0.10154739"
+                        ]
+                    },
+                    {
+                        "name": "avg_Mn_K",
+                        "rows": [
+                            "-9.1824043"
+                        ]
+                    },
+                    {
+                        "name": "avg_Mn_H",
+                        "rows": [
+                            "-0.14371639"
+                        ]
+                    }
+                ],
+                "labels": true,
+                "rows": 1
+            }
+        }
+    }
+]

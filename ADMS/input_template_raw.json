@@ -1,0 +1,69 @@
+{
+    "description": "",
+    "inputs": [
+        {
+            "description": "",
+            "name": "Density",
+            "type": "real",
+            "value": 26.89
+        },
+        {
+            "description": "",
+            "name": "Thickness",
+            "type": "real",
+            "units": "mm",
+            "value": 0.18
+        },
+        {
+            "description": "",
+            "name": "Seed",
+            "type": "integer",
+            "value": 2
+        },
+        {
+            "description": "",
+            "name": "Out Path",
+            "type": "file_path",
+            "value": null
+        },
+        {
+            "description": "",
+            "name": "Inner Size",
+            "type": "real",
+            "units": "mm",
+            "value": 15.0
+        },
+        {
+            "description": "",
+            "name": "Size Multi",
+            "type": "real",
+            "value": 1.6
+        },
+        {
+            "description": "",
+            "name": "Stress Path",
+            "type": "file_path",
+            "value": null
+        },
+        {
+            "description": "",
+            "name": "Shear Stress Path",
+            "type": "file_path",
+            "value": null
+        },
+        {
+            "description": "",
+            "name": "STL Path",
+            "type": "file_path",
+            "value": null
+        },
+        {
+            "description": "",
+            "name": "Cell Size",
+            "type": "real",
+            "units": "mm",
+            "value": 3.0
+        }
+    ],
+    "title": "ADMS raw"
+}

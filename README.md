@@ -1,7 +1,7 @@
 # AI-Driven Inverse Design of Multifunctional Metamaterials with Adaptive Stiffness
 
 Code for an MSc thesis (MECH0100, UCL Mechanical Engineering, 2026).
-Authors: Kwun Kit (Alex) Wong and ZheZhe Du. Supervisor: Dr Farooq Azam and Dr Federico Bosi.
+Authors: Kwun Kit (Alex) Wong and ZheZhe Du. Supervisor: Dr Farooq Azam.
 
 A forward machine-learning surrogate predicts the homogenised elastic properties
 of two lattice families from geometry alone, and a two-level search inverts it:
@@ -18,6 +18,8 @@ sphere packing, and **TPMS**, periodic minimal surfaces tiled from a unit cell.
 
 | folder | contents |
 |---|---|
+| `ADMS/` | geometry generation and finite element homogenisation for the ADMS family — `ntop_batch.py`, the production driver that runs nTop headlessly, plus its input schemas, run sheet and verification |
+| `TPMS/` | the same for the TPMS family — ZheZhe Du's STL export and homogenisation drivers |
 | `ML/` | the numbered batch files, run in order — database build, training, holdout evaluation, model export |
 | `ML/scripts/` | feature extraction, point-cloud preparation, grouped cross-validation, RF / GPR / PointNet training, export and gate checks |
 | `ML/data/` | three datasets, quadratic elements only |
@@ -63,10 +65,20 @@ Run the batch files in `ML/` in numerical order. Paths resolve from
 `ML_settings.xlsx` through `ML/scripts/run_paths.py` — edit the workbook, not
 the scripts.
 
-Geometry files are not included. A single ADMS candidate STL is 200–225 MB and a
-solved nTop notebook is up to 448 MB, well past GitHub's 100 MB per-file limit,
-so `.ntop` files, point clouds and run folders are excluded. One example STL is
-included to show the output format.
+**The nTop notebooks are not in this repository.** There are 54 of them totalling
+3.2 GiB, and eight individually exceed GitHub's 100 MiB per-file limit;
+compressing them does not help, because a solved notebook has a mesh baked in
+and only reaches about 65 % of its size. They are held on OneDrive:
+
+<https://liveuclac-my.sharepoint.com/:f:/g/personal/ucemkaw_ucl_ac_uk/IgBdsfxh7yrES6lLWA3TIWFQAXt221DHvt-3cSCf4ZdJvxc?e=OXHbT1>
+
+Ask Alex Wong for access. `ADMS/ADMS_NOTEBOOKS.md` and `TPMS/TPMS_NOTEBOOKS.md`
+list every notebook by name, class and size, explain what each class does, and
+say where they belong if you restore them.
+
+Point clouds, run folders and candidate geometries are excluded for the same
+reason — a single ADMS candidate STL is 200–225 MB. One example STL is included
+to show the output format.
 
 ## Scope
 
