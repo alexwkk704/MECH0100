@@ -1,0 +1,33 @@
+FORWARD MODEL - COMBINED
+built (UTC)     : 2026-08-12 21:04:13
+trained on      : ALL 346 rows of dataset_COMBINED_quad.csv (sha1 5fcd1e05e3046dde)
+                  TPMS 183, ADMS 163
+targets         : E_over_Es, G_over_Gs, TAI, C11_n, C12_n, C44_n
+seeds           : [1, 2, 3, 4]  (ensemble, predictions averaged)
+n_points        : 2048   density channel: True (from Rho_rel)
+log10 targets   : True    deep head: True
+rotation_aug    : True (n_rot=4, es_gpa=1.0)
+epochs          : 600  batch 8  lr 0.0001
+
+NO EARLY STOPPING. The epoch count is the CV-validated budget from
+the settings sheet, used as-is. The cross-validated runs picked a best
+epoch against a validation slice; a model trained on 100% of the rows
+has no such slice, so the budget is fixed in advance instead. State
+this in the thesis rather than implying early stopping was used.
+
+TRAINING LABEL RANGE (GATE 4 rejects asks outside this):
+  E_over_Es    0.00233 .. 0.29966
+  G_over_Gs    0.00242 .. 0.31033
+  TAI          0.000147 .. 0.3738
+  C11_n        0.00259 .. 0.36532
+  C12_n        0.000585 .. 0.12256
+  C44_n        0.000705 .. 0.116305
+
+DENSITY CHANNEL SOURCE - READ BEFORE PREDICTING ON NEW GEOMETRY
+  Training used the dataset's Rho_rel column.
+  TPMS rows: Rho_rel == VF measured from the STL, exactly (0.000%).
+  ADMS rows: Rho_rel is nTop's p_rel and differs from STL VF by a
+  median 0.33% and up to 6.59%. For a new ADMS candidate feed nTop's
+  p_rel, not a measured VF.
+
+spec source     : ML_settings.xlsx sheet 'pointnet_COMBINED', opened read-only

@@ -1,0 +1,68 @@
+{
+  "n_models": 4,
+  "arch": "pointnet_v2",
+  "targets": [
+    "E_over_Es",
+    "G_over_Gs",
+    "TAI",
+    "C11_n",
+    "C12_n",
+    "C44_n"
+  ],
+  "in_dim": 4,
+  "deep": true,
+  "ymean": "[-1.1825385 -1.1743891 -1.291895  -1.0702459 -1.5123446 -1.5989416]",
+  "ystd": "[0.32530713 0.32645762 0.5352135  0.32317844 0.35157853 0.34999412]",
+  "use_log": true,
+  "use_density": true,
+  "density_column": "Rho_rel",
+  "n_points": 2048,
+  "pc_seed": 1,
+  "prep": {
+    "sampler": "trimesh.sample.sample_surface",
+    "centre": "subtract mean of sampled points",
+    "scale": "divide by max peak-to-peak extent (unit box)",
+    "source": "pointcloud_prep.process - imported, not reimplemented"
+  },
+  "n_train": 346,
+  "seed": 1,
+  "seeds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "profile": "COMBINED",
+  "label_min": {
+    "E_over_Es": 0.0023300000466406345,
+    "G_over_Gs": 0.002420000033453107,
+    "TAI": 0.00014699999883305281,
+    "C11_n": 0.002589999930933118,
+    "C12_n": 0.0005849999724887311,
+    "C44_n": 0.0007050000131130219
+  },
+  "label_max": {
+    "E_over_Es": 0.29965999722480774,
+    "G_over_Gs": 0.31033000349998474,
+    "TAI": 0.37380000948905945,
+    "C11_n": 0.36531999707221985,
+    "C12_n": 0.12256000190973282,
+    "C44_n": 0.11630500108003616
+  },
+  "vf_min": 0.05163,
+  "vf_max": 0.56224,
+  "es_gpa": 1.0,
+  "epochs": 600,
+  "batch_size": 8,
+  "lr": 0.0001,
+  "jitter_std": 0.01,
+  "rotation_aug": true,
+  "n_rot": 4,
+  "dataset_name": "dataset_COMBINED_quad.csv",
+  "dataset_sha1": "5fcd1e05e3046dde",
+  "stl_folders": [
+    "D:\\MECH0100\\Share\\ADMS\\ADMS_STL",
+    "D:\\MECH0100\\Zhezhe\\week7\\stl model"
+  ],
+  "built_utc": "2026-08-12 21:04:13"
+}

@@ -1,0 +1,15 @@
+# Line endings. Without this git rewrites .bat files to Unix endings on
+# checkout and they stop running on Windows. This is the single most likely
+# way a round-trip through GitHub could break the pipeline.
+* text=auto
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.py  text eol=lf
+*.md  text eol=lf
+
+# Binary - never diffed, never line-ending converted.
+*.pt   binary
+*.pth  binary
+*.xlsx binary
+*.stl  binary
+*.npz  binary
