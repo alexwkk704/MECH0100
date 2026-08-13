@@ -65,16 +65,16 @@ Run the batch files in `ML/` in numerical order. Paths resolve from
 `ML_settings.xlsx` through `ML/scripts/run_paths.py` — edit the workbook, not
 the scripts.
 
-**The nTop notebooks are not in this repository.** There are 54 of them totalling
+**The nTop files are not in this repository.** There are 54 of them totalling
 3.2 GiB, and eight individually exceed GitHub's 100 MiB per-file limit;
-compressing them does not help, because a solved notebook has a mesh baked in
+compressing them does not help, because a solved file has a mesh baked in
 and only reaches about 65 % of its size. They are held on OneDrive:
 
 <https://liveuclac-my.sharepoint.com/:f:/g/personal/ucemkaw_ucl_ac_uk/IgBdsfxh7yrES6lLWA3TIWFQAXt221DHvt-3cSCf4ZdJvxc?e=OXHbT1>
 
-Ask Alex Wong for access. `ADMS/ADMS_NOTEBOOKS.md` and `TPMS/TPMS_NOTEBOOKS.md`
-list every notebook by name, class and size, explain what each class does, and
-say where they belong if you restore them.
+Ask Alex Wong for access. `ADMS/docs/ADMS_nTop_files.md` and
+`TPMS/docs/TPMS_nTop_files.md` name every one, with its class, size and where it
+belongs if you restore it.
 
 Point clouds, run folders and candidate geometries are excluded for the same
 reason — a single ADMS candidate STL is 200–225 MB. One example STL is included

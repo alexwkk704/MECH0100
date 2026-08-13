@@ -1,9 +1,9 @@
-# TPMS nTop notebooks
+# TPMS nTop files
 
-The TPMS toolchain is **45 notebooks totalling 1.71 GiB**, so it is not stored in
+The TPMS toolchain is **45 nTop files totalling 1.71 GiB**, so it is not stored in
 this repository. Two of them individually exceed GitHub's 100 MiB per-file limit.
 
-These are ZheZhe Du's notebooks.
+These are ZheZhe Du's nTop files.
 
 ## Where they are
 
@@ -16,16 +16,16 @@ These are ZheZhe Du's notebooks.
 | folder | contents |
 |---|---|
 | `TPMS STL/` | 27 generators, one per topology — geometry and STL export only |
-| `TPMS FEA/` | 18 homogenisation notebooks covering the 17 topologies in `ML/data/dataset_TPMS_quad.csv` |
+| `TPMS FEA/` | 18 homogenisation nTop files covering the 17 topologies in `ML/data/dataset_TPMS_quad.csv` |
 
-The FEA notebooks are `-s` saved result copies, so a mesh is baked into each.
+The FEA nTop files are `-s` saved result copies, so a mesh is baked into each.
 They still work as input templates because the inputs are unchanged — that is
 also why they are large.
 
 ## STL generators — 27
 
 Driven by `tpms_stl_batch_export.py`, which writes only `t_max`, `t_min` (= −t),
-`Tolerance` (0.2 mm) and `Path`. Everything else stays at the notebook default.
+`Tolerance` (0.2 mm) and `Path`. Everything else stays at the nTop file default.
 The driver validates each export: file exists, larger than 2000 bytes, non-zero
 binary triangle count.
 
@@ -59,7 +59,7 @@ binary triangle count.
 | `W Generator.ntop` | 27.7 MB |
 | `Y Generator.ntop` | 24.6 MB |
 
-## FEA notebooks — 18
+## FEA nTop files — 18
 
 Driven by `tpms_batch_run (3).py`, which writes `t_max`, `t_min`, `Edge length`
 and `Path`.
